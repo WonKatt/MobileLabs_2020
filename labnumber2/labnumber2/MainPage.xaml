@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:labnumber2"
+             xmlns:controls="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="labnumber2.MainPage">
+
+ 
+    <StackLayout>
+        <StackLayout >
+            <Label Text="Enter pizza Name:"/>
+            <Entry x:Name="Entry"/>
+            <Label Text="Enter ingredients:"/>
+            <controls:RadioButtonGroupView x:Name="RadioButtonGroupView">
+                <controls:RadioButton Text="Mozarella" IsChecked="True"  Value="Mozarella"/>
+                <controls:RadioButton Text="Al'fredo sauce" Value="Al'fredo sauce"/>
+                <controls:RadioButton Text="Parmesan (on top)" Value="Parmesan (on top)"/>
+                <controls:RadioButton Text="BBQ sauce (on top)" Value="BBQ sauce (on top)"/>
+            </controls:RadioButtonGroupView>
+            <Label Text="Switch result view"/>
+            <Switch x:Name="Switch"/>
+            <Button Text="Order" Clicked="Button_OnClicked"/>
+            <Label x:Name="ResultLabel" IsVisible="false"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
+ 
